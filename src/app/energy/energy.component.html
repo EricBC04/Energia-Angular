@@ -1,0 +1,90 @@
+<hr class="mt-5">
+<div class="row pe-3 ps-3">
+    <div class="col">
+        <div class="form-floating">
+            <input type="number" name="membroQ" class="form-control mb-3" [(ngModel)="membroQ"]=>
+            <label for="floatingInputValue">Quantidade de moradores</label>
+        </div>
+    </div>
+</div>
+<div class="row pe-3 ps-3">
+    <div class="col">
+        <div class="form-floating">
+            <input type="number" name="comodoQ" class="form-control mb-3" [(ngModel)]="comodoQ">
+            <label for="floatingInputValue">Quantidade de comodos</label>
+        </div>
+    </div>
+</div>
+<div class="row pe-3 ps-3">
+    <div class="col">
+        <div class="input-group">
+            <div class="form-floating">
+                <select name="maquinaLaV" class="form-select" [(ngModel)]="maquinaLaV">
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+                </select>
+                <label for="floatingSelect">Máquina de lavar</label>
+            </div>
+            <div class="form-floating">
+                <input type="number" name="maquinaLaT" class="form-control mb-3" [(ngModel)]="maquinaLaT">
+                <label for="floatingInputValue">Tempo de uso da Máquina de lavar (horas)</label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row pe-3 ps-3">
+    <div class="col">
+        <div class="input-group">
+            <div class="form-floating">
+                <select name="maquinaSeV" class="form-select" [(ngModel)]="maquinaSeV">
+                    <option value="1">Sim</option>
+                    <option value="0">Não</option>
+                </select>
+                <label for="floatingSelect">Máquina de secar</label>
+            </div>
+            <div class="form-floating">
+                <input type="number" name="maquinaSeT" class="form-control mb-3" [(ngModel)]="maquinaSeT">
+                <label for="floatingInputValue">Tempo de uso da Máquina de secar (horas)</label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row ps-3 pe-3">
+    <div class="col">
+        <div class="input-group">
+            <div class="form-floating">
+                <input type="number" name="computQ" class="form-control mb-3" [(ngModel)]="computQ">
+                <label for="floatingInputValue">Quantidades de TVs e PCs</label>
+            </div>
+            <div class="form-floating">
+                <input type="number" name="computT" class="form-control mb-3" [(ngModel)]="computT">
+                <label for="floatingInputValue">Tempo de uso médio de cada um (horas)</label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row pe-3 ps-3">
+    <div class="col">
+        <div class="input-group">
+            <div class="form-floating">
+                <input type="number" name="tarifaE" class="form-control mb-3" [(ngModel)]="tarifaE">
+                <label for="floatingInputValue">Valor do kWh</label>
+            </div>
+            <div class="form-floating">
+                <input type="number" name="tarifaD" class="form-control mb-3" [(ngModel)]="tarifaD">
+                <label for="floatingInputValue">Valor da tarifa de disponibilidade</label>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="row mb-3">
+    <div class="col-3  mx-auto">
+        <button type="submit" class="btn btn-outline-dark btn-lg" name="calcular" (click)="calcular()">Calcular</button>
+    </div>
+</div>
+<div class="row mb-5">
+    <div class="col ps-5 pe-5 mx-auto">
+        <textarea name="resup" class="form-control" id="resup" cols="30" rows="0" [value]="resup" readonly></textarea>
+    </div>
+</div>
